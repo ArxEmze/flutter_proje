@@ -1,5 +1,6 @@
 import 'package:flutter_proje/screens/client/login.dart';
 import 'package:flutter_proje/screens/client/register.dart';
+import 'package:flutter_proje/screens/core/error.dart';
 import 'package:go_router/go_router.dart';
 
 import '../screens/client/profile.dart';
@@ -11,6 +12,7 @@ import '../screens/static/contact.dart';
 
 // GoRouter configuration
 final routes = GoRouter(
+  errorBuilder: (context, state) => const ErrorScreen(),
   routes: [
     GoRoute(
       path: '/',
