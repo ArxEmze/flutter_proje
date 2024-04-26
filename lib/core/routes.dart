@@ -1,6 +1,8 @@
 import 'package:flutter_proje/screens/client/login.dart';
 import 'package:flutter_proje/screens/client/register.dart';
 import 'package:flutter_proje/screens/core/error.dart';
+import 'package:flutter_proje/screens/core/loader.dart';
+import 'package:flutter_proje/screens/static/boarding.dart';
 import 'package:go_router/go_router.dart';
 
 import '../screens/client/profile.dart';
@@ -16,7 +18,15 @@ final routes = GoRouter(
   routes: [
     GoRoute(
       path: '/',
+      builder: (context, state) => const LoaderScreen(),
+    ),
+    GoRoute(
+      path: '/home',
       builder: (context, state) => const HomeScreen(),
+    ),
+    GoRoute(
+      path: '/boarding',
+      builder: (context, state) => const BoardingScreen(),
     ),
     GoRoute(
       path: '/login',
